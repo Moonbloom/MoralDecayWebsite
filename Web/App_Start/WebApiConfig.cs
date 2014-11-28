@@ -3,7 +3,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web.Http;
 
-namespace Web.App_Start
+namespace Web
 {
     public class WebApiConfig
     {

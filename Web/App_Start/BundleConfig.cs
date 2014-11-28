@@ -1,35 +1,37 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace Web
 {
     public class BundleConfig
     {
-        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            #region Core Scripts
+            bundles.Add(new ScriptBundle("~/bundles/core/js/header").Include(
+                "~/Scripts/core/various/modernizr-{version}.js" // Use the development version of Modernizr to develop with and learn from. Then, when you're ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+                ));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/bundles/core/js/footer").Include(
+                "~/Scripts/core/angularjs/angular.js",
+                "~/Scripts/core/bootstrap/bootstrap.js",
+                "~/Scripts/core/various/respond.js",
+                "~/Scripts/core/jquery/jquery-{version}.js",
+                "~/Scripts/core/jquery/jquery.validate*"
+                ));
+            #endregion
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            #region Core Styles
+            bundles.Add(new StyleBundle("~/bundles/core/css").Include(
+                "~/Content/bootstrap/bootstrap.css",
+                "~/Content/site.css"
+                ));
+            #endregion
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
-
+            #region Optimization
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
+            #endregion
         }
     }
 }

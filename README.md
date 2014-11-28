@@ -1,11 +1,9 @@
-Mvc-webapi-onion-template
-==================
-
-Project for a MVC Webapi template using Onion architecture by Rai4n
+Source files for Moral Decay's new website (work in progress)
 
 
-This is a extension to the MVC template using Onion architecture made by snebjorn
+Uses Rai4n's MVC WebApi Onion Template as a base.
+Source: https://github.com/Rai4n/mvc-webapi-onion-template
 
-https://github.com/snebjorn/mvc-onion-template
 
-** Please follow his work **
+Author:
+Kasper H. Liholm (Moonbloom)
