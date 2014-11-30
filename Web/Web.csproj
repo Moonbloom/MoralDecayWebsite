@@ -194,6 +194,7 @@
     <Compile Include="Controllers\Api\TestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RecruitmentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,23 +213,41 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\site.css" />
+    <Content Include="Content\site.css">
+      <DependentUpon>site.scss</DependentUpon>
+    </Content>
     <Content Include="..\ConnectionStrings.config">
       <Link>ConnectionStrings.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\core\angularjs\angular.js" />
-    <Content Include="Scripts\core\angularjs\angular.min.js" />
-    <Content Include="Scripts\core\angularjs\angular.min.js.map" />
+    <Content Include="Images\class-icons\icon-deathknight.jpg" />
+    <Content Include="Images\class-icons\icon-druid.jpg" />
+    <Content Include="Images\class-icons\icon-hunter.jpg" />
+    <Content Include="Images\class-icons\icon-mage.jpg" />
+    <Content Include="Images\class-icons\icon-monk.jpg" />
+    <Content Include="Images\class-icons\icon-paladin.jpg" />
+    <Content Include="Images\class-icons\icon-priest.jpg" />
+    <Content Include="Images\class-icons\icon-rogue.jpg" />
+    <Content Include="Images\class-icons\icon-shaman.jpg" />
+    <Content Include="Images\class-icons\icon-warlock.jpg" />
+    <Content Include="Images\class-icons\icon-warrior.jpg" />
+    <Content Include="Scripts\angular\bodyCtrl.js" />
+    <Content Include="Scripts\angular\back-img-directive.js" />
+    <Content Include="Scripts\angular\home\homeCtrl.js" />
+    <Content Include="Scripts\angular\recruiting\recruitingCtrl.js" />
+    <Content Include="Scripts\core\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\core\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\core\angular\angular.js" />
+    <Content Include="Scripts\core\angular\angular.min.js" />
+    <Content Include="Scripts\core\angular\angular.min.js.map" />
+    <Content Include="Content\site.scss" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap\bootstrap.css.map" />
     <None Include="Scripts\core\jquery\jquery-2.1.1.intellisense.js" />
-    <Content Include="Scripts\core\angularjs\angular-mocks.js" />
-    <Content Include="Scripts\core\bootstrap\bootstrap.js" />
-    <Content Include="Scripts\core\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\core\angular\angular-mocks.js" />
     <Content Include="Scripts\core\jquery\jquery-2.1.1.js" />
     <Content Include="Scripts\core\jquery\jquery-2.1.1.min.js" />
     <Content Include="Scripts\core\jquery\jquery-2.1.1.min.map" />
@@ -238,11 +257,11 @@
     <Content Include="Scripts\core\jquery\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\core\jquery\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\core\various\modernizr-2.8.3.js" />
-    <Content Include="Scripts\core\various\npm.js" />
     <Content Include="Scripts\core\various\respond.js" />
     <Content Include="Scripts\core\various\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\core\various\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\core\various\respond.min.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -279,13 +298,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Recruitment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Partials\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>

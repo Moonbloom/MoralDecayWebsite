@@ -1,0 +1,131 @@
+/* Variables */
+$color-dark: #333333;
+$color-bright: #F0F0F0;
+$hover-color: rgba(255, 255, 255, 0.2);
+
+$box-shadow-light: 0 0 15px rgba(0, 0, 0, .4);
+$box-shadow-dark: 0 0 15px rgba(0, 0, 0, 1);
+
+[ng-cloak] {
+    display: none!important;
+}
+
+body {
+    padding-top: 70px;
+    background: #CCCCCC;
+}
+
+.body-content {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: $box-shadow-light;
+    padding-left: 0;
+    padding-right: 0;
+
+    .main-content {
+        margin-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Top menu */
+.navbar {
+    background: $color-dark;
+    box-shadow: $box-shadow-dark;
+    border: none;
+
+    a {
+        color: $color-bright!important;
+    }
+}
+
+a:hover {
+    background: $hover-color!important;
+}
+
+h2 {
+    margin: 0;
+}
+
+hr {
+    margin: 0;
+}
+
+/* Left navigation menu */
+#left-nav-menu {
+    background: $color-dark;
+    width: 10em;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        color: $color-bright;
+        display: block;
+        padding: 8px 12px;
+        text-decoration: none;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: $color-dark;
+
+    p {
+        color: $color-bright;
+        margin: 0;
+    }
+}
+
+#home {
+
+}
+
+#recruiting {
+    .recruitment-closed {
+        color: #FF420E
+    }
+
+    .recruitment-open {
+        margin-bottom: 10px;
+    }
+
+    #recruitment-list {
+        margin-left: 16px;
+    }
+
+    .recruitment-class {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        
+        .class-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            box-shadow: 0 0 3px #000000, inset 0 0 5px #DDDDDD;
+            border: 1px solid #AAAAAA
+        }
+
+        .class-name-spec {
+            margin-left: 5px;
+        }
+
+        .class-priority {
+            float: right;
+            padding-top: 10px;
+            padding-right: 15px;
+        }
+    }
+}
