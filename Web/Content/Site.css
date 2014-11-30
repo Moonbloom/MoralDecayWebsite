@@ -4,7 +4,8 @@
 
 body {
   padding-top: 70px;
-  background: #CCCCCC; }
+  background: #CCCCCC;
+  font-family: 'Open Sans', sans-serif; }
 
 .body-content {
   margin-right: auto;
@@ -25,15 +26,6 @@ body {
   border: none; }
   .navbar a {
     color: #f0f0f0 !important; }
-
-a:hover {
-  background: rgba(255, 255, 255, 0.2) !important; }
-
-h2 {
-  margin: 0; }
-
-hr {
-  margin: 0; }
 
 /* Left navigation menu */
 #left-nav-menu {
@@ -63,6 +55,23 @@ footer {
     color: #f0f0f0;
     margin: 0; }
 
+/* Overall fixes */
+a:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear; }
+
+h2 {
+  margin: 0; }
+
+hr {
+  margin: 0; }
+
+/* Page specific for Home */
+/* Page specific for Recruiting */
 #recruiting .recruitment-closed {
   color: #ff420e; }
 #recruiting .recruitment-open {

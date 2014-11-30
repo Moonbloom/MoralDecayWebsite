@@ -7,12 +7,14 @@ $box-shadow-light: 0 0 15px rgba(0, 0, 0, .4);
 $box-shadow-dark: 0 0 15px rgba(0, 0, 0, 1);
 
 [ng-cloak] {
-    display: none!important;
+    display: none!important
 }
 
 body {
     padding-top: 70px;
     background: #CCCCCC;
+
+    font-family: 'Open Sans', sans-serif;
 }
 
 .body-content {
@@ -39,18 +41,6 @@ body {
     a {
         color: $color-bright!important;
     }
-}
-
-a:hover {
-    background: $hover-color!important;
-}
-
-h2 {
-    margin: 0;
-}
-
-hr {
-    margin: 0;
 }
 
 /* Left navigation menu */
@@ -89,10 +79,32 @@ footer {
     }
 }
 
+/* Overall fixes */
+a:hover {
+    background: $hover-color!important;
+
+    $hover-delay: 200ms;
+    -webkit-transition: background-color $hover-delay linear;
+    -moz-transition: background-color $hover-delay linear;
+    -o-transition: background-color $hover-delay linear;
+    -ms-transition: background-color $hover-delay linear;
+    transition: background-color $hover-delay linear;
+}
+
+h2 {
+    margin: 0;
+}
+
+hr {
+    margin: 0;
+}
+
+/* Page specific for Home */
 #home {
 
 }
 
+/* Page specific for Recruiting */
 #recruiting {
     .recruitment-closed {
         color: #FF420E

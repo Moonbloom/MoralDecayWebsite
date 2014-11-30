@@ -241,11 +241,11 @@
     <Content Include="Scripts\core\angular\angular.min.js" />
     <Content Include="Scripts\core\angular\angular.min.js.map" />
     <Content Include="Content\site.scss" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap\bootstrap.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\core\jquery\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\core\angular\angular-mocks.js" />
     <Content Include="Scripts\core\jquery\jquery-2.1.1.js" />

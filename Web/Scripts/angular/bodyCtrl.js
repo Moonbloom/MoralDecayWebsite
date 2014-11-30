@@ -5,24 +5,24 @@ app.controller('bodyCtrl', [
 
     $scope.leftNavMenuItems = [
         {
-            text: "Home",
+            text: "HOME",
             href: "/"
         },
         {
-            text: "Forum",
+            text: "FORUM",
             href: "/forum"
         },
         {
-            text: "Recruitment",
+            text: "RECRUITMENT",
             href: "/recruitment"
         },
         {
-            text: "Gallery",
+            text: "GALLERY",
             href: "/gallery"
         },
         {
-            text: "About",
-            href: "/about"
+            text: "ABOUT US",
+            href: "/about-us"
         }
     ];
 }]);
