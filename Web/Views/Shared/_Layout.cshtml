@@ -6,9 +6,9 @@
     <title>@ViewBag.Title - Moral Decay - Sunstrider</title>
     @Styles.Render("~/bundles/core/css")
     @Scripts.Render("~/bundles/core/js/header")
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
 </head>
-<body ng-cloak ng-controller="bodyCtrl">
+<body ng-controller="bodyCtrl">
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,7 +21,7 @@
     </div>
     <div class="container body-content row">
         <div class="main-content">
-            <ul class="col-md-2" id="left-nav-menu">
+            <ul class="col-md-2" id="left-nav-menu" ng-cloak>
                 <li ng-repeat="menuItem in leftNavMenuItems">
                     <a href="{{menuItem.href}}">
                         <span>{{menuItem.text}}</span>

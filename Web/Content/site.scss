@@ -83,12 +83,13 @@ footer {
 a:hover {
     background: $hover-color!important;
 
-    $hover-delay: 200ms;
-    -webkit-transition: background-color $hover-delay linear;
-    -moz-transition: background-color $hover-delay linear;
-    -o-transition: background-color $hover-delay linear;
-    -ms-transition: background-color $hover-delay linear;
-    transition: background-color $hover-delay linear;
+    $hover-delay: 250ms;
+    $hover-animation: linear;
+    -webkit-transition: background-color $hover-delay $hover-animation;
+    -moz-transition: background-color $hover-delay $hover-animation;
+    -o-transition: background-color $hover-delay $hover-animation;
+    -ms-transition: background-color $hover-delay $hover-animation;
+    transition: background-color $hover-delay $hover-animation;
 }
 
 h2 {
@@ -97,6 +98,11 @@ h2 {
 
 hr {
     margin: 0;
+}
+
+/* Set max-width on the form input elements since they're 100% wide by default */
+input, select, textarea {
+    max-width: 300px;
 }
 
 /* Page specific for Home */
