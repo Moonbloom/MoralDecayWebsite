@@ -15,6 +15,7 @@ namespace Web
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/core/js/footer").Include(
+                "~/Scripts/core/bootstrap/bootstrap.js",
                 "~/Scripts/core/jquery/jquery-{version}.js",
                 "~/Scripts/core/jquery/jquery.validate*"
                 ));
@@ -22,7 +23,7 @@ namespace Web
 
             #region Core styles
             bundles.Add(new StyleBundle("~/bundles/core/css").Include(
-                "~/Content/custom-bootstrap/bootstrap.css",
+                "~/Content/bootstrap/bootstrap.css",
                 "~/Content/site.css"
                 ));
             #endregion
