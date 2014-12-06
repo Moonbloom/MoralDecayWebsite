@@ -11,7 +11,6 @@ $box-shadow-dark: 0 0 15px rgba(0, 0, 0, 1);
 }
 
 body {
-    padding-top: 70px;
     background: #CCCCCC;
     font-family: 'Open Sans', sans-serif;
 }
@@ -43,13 +42,14 @@ body {
 .container {
     margin-right: auto;
     margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    background: white;
 }
 
 .body-content {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: $box-shadow-light;
-    padding-left: 0;
-    padding-right: 0;
 
     .main-content {
         padding: 15px;
@@ -74,6 +74,8 @@ body {
     background: $color-dark;
     box-shadow: $box-shadow-dark;
     border: none;
+    margin-bottom: 0;
+    border-radius: 0;
 
     a {
         color: $color-bright!important;
@@ -186,4 +188,8 @@ input, select, textarea {
             padding-right: 15px;
         }
     }
+}
+
+.logo-headline{
+    padding: 25px;
 }
