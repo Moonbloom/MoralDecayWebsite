@@ -15,7 +15,6 @@ namespace Web
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/core/js/footer").Include(
-                "~/Scripts/core/bootstrap/bootstrap.js",
                 "~/Scripts/core/jquery/jquery-{version}.js",
                 "~/Scripts/core/jquery/jquery.validate*"
                 ));
@@ -23,7 +22,7 @@ namespace Web
 
             #region Core styles
             bundles.Add(new StyleBundle("~/bundles/core/css").Include(
-                "~/Content/bootstrap/bootstrap.css",
+                "~/Content/custom-bootstrap/bootstrap.css",
                 "~/Content/site.css"
                 ));
             #endregion
@@ -34,8 +33,8 @@ namespace Web
             #endregion
 
             #region Page specific script bundles
-            bundles.Add(new ScriptBundle("~/bundles/view/home").Include(
-                "~/Scripts/angular/home/homeCtrl.js"
+            bundles.Add(new ScriptBundle("~/bundles/view/frontpage").Include(
+                "~/Scripts/angular/frontpage/frontpageCtrl.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/view/recruiting").Include(

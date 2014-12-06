@@ -3,7 +3,7 @@
 namespace Web.Controllers
 {
     [RequireHttps]
-    public class HomeController : Controller
+    public class FrontpageController : Controller
     {
         public ActionResult Index()
         {

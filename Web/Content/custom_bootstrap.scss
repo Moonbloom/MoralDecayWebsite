@@ -1,0 +1,103 @@
+/* DEPRECATED - Keeping it for now for reference - Not currently being used anywhere */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+
+    a {
+        color: #F0F0F0!important;
+    }
+
+    .navbar-fixed-top {
+        border-width: 0 0 1px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .navbar-header {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+
+        .navbar-brand {
+            margin-left: -15px;
+            float: left;
+            height: 50px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+
+    .nav {
+        padding-left: 0;
+        list-style: none;
+
+        > li {
+            position: relative;
+            display: block;
+
+            > a {
+                position: relative;
+                display: block;
+                padding: 10px 15px;
+            }
+        }
+    }
+
+    .navbar-nav {
+        margin: 0;
+
+        > li {
+            float: left;
+
+            > a {
+                padding-bottom: 15px;
+                padding-top: 15px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .navbar-right {
+        float: right!important;
+        margin-right: -15px;
+    }
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}

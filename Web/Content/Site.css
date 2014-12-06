@@ -7,17 +7,40 @@ body {
   background: #CCCCCC;
   font-family: 'Open Sans', sans-serif; }
 
-.body-content {
+@media (min-width: 410px) {
+  .container {
+    width: 380px; } }
+@media (min-width: 768px) {
+  .container {
+    width: 750px; } }
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
+.container {
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto; }
+
+.body-content {
   background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   padding-left: 0;
   padding-right: 0; }
   .body-content .main-content {
-    margin-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px; }
+    padding: 15px; }
+
+.renderbody {
+  padding-left: 15px;
+  display: inline-block; }
+
+* {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0; }
 
 /* Top menu */
 .navbar {
@@ -27,29 +50,29 @@ body {
   .navbar a {
     color: #f0f0f0 !important; }
 
-/* Left navigation menu */
-#left-nav-menu {
-  background: #333333;
-  width: 10em;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  margin-left: 0;
-  padding: 0; }
-  #left-nav-menu li {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  #left-nav-menu a {
-    color: #f0f0f0;
-    display: block;
-    padding: 8px 12px;
-    text-decoration: none; }
+/* Left side menu */
+#left-side-menu {
+  float: left; }
+  #left-side-menu #left-nav-menu {
+    background: #333333;
+    width: 10em;
+    margin-bottom: 15px;
+    padding: 0; }
+    #left-side-menu #left-nav-menu li {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    #left-side-menu #left-nav-menu a {
+      color: #f0f0f0;
+      display: block;
+      padding: 8px 12px;
+      text-decoration: none; }
 
 /* Footer */
 footer {
-  margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 15px;
   background: #333333; }
   footer p {
     color: #f0f0f0;
@@ -74,7 +97,7 @@ hr {
 input, select, textarea {
   max-width: 300px; }
 
-/* Page specific for Home */
+/* Page specific for Frontpage */
 /* Page specific for Recruiting */
 #recruiting .recruitment-closed {
   color: #ff420e; }

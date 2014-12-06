@@ -195,7 +195,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\TestController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\FrontpageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RecruitmentController.cs" />
     <Compile Include="Global.asax.cs">
@@ -209,10 +209,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap\bootstrap.css" />
-    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\custom-bootstrap\bootstrap.css" />
+    <Content Include="Content\custom_bootstrap.css">
+      <DependentUpon>custom_bootstrap.scss</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -237,19 +237,16 @@
     <Content Include="Images\errors\404-killed-kenny.jpg" />
     <Content Include="Scripts\angular\bodyCtrl.js" />
     <Content Include="Scripts\angular\back-img-directive.js" />
-    <Content Include="Scripts\angular\home\homeCtrl.js" />
+    <Content Include="Scripts\angular\frontpage\frontpageCtrl.js" />
     <Content Include="Scripts\angular\recruiting\recruitingCtrl.js" />
-    <Content Include="Scripts\core\bootstrap\bootstrap.js" />
-    <Content Include="Scripts\core\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\core\angular\angular.js" />
     <Content Include="Scripts\core\angular\angular.min.js" />
     <Content Include="Scripts\core\angular\angular.min.js.map" />
     <Content Include="Content\site.scss" />
-    <Content Include="Content\bootstrap\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap\bootstrap.css.map" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\custom_bootstrap.scss" />
     <None Include="Scripts\core\jquery\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\core\angular\angular-mocks.js" />
     <Content Include="Scripts\core\jquery\jquery-2.1.1.js" />
@@ -278,7 +275,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Frontpage\Index.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />

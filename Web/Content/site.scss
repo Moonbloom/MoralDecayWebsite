@@ -13,23 +13,60 @@ $box-shadow-dark: 0 0 15px rgba(0, 0, 0, 1);
 body {
     padding-top: 70px;
     background: #CCCCCC;
-
     font-family: 'Open Sans', sans-serif;
 }
 
-.body-content {
+@media (min-width: 410px) {
+    .container {
+        width: 380px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.container {
     margin-right: auto;
     margin-left: auto;
+}
+
+.body-content {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: $box-shadow-light;
     padding-left: 0;
     padding-right: 0;
 
     .main-content {
-        margin-top: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 15px;
     }
+}
+
+.renderbody {
+    padding-left: 15px;
+    display: inline-block;
+}
+
+* {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
 }
 
 /* Top menu */
@@ -43,34 +80,37 @@ body {
     }
 }
 
-/* Left navigation menu */
-#left-nav-menu {
-    background: $color-dark;
-    width: 10em;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    margin-left: 0;
-    padding: 0;
+/* Left side menu */
 
-    li {
-        margin: 0;
+#left-side-menu {
+    float: left;
+
+    #left-nav-menu {
+        background: $color-dark;
+        width: 10em;
+        margin-bottom: 15px;
         padding: 0;
-        list-style: none;
-    }
 
-    a {
-        color: $color-bright;
-        display: block;
-        padding: 8px 12px;
-        text-decoration: none;
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            color: $color-bright;
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+        }
     }
 }
 
 /* Footer */
 footer {
-    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 15px;
     background: $color-dark;
 
     p {
@@ -105,8 +145,8 @@ input, select, textarea {
     max-width: 300px;
 }
 
-/* Page specific for Home */
-#home {
+/* Page specific for Frontpage */
+#frontpage {
 
 }
 
