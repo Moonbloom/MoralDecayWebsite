@@ -6,9 +6,9 @@ body {
   background: #CCCCCC;
   font-family: 'Open Sans', sans-serif; }
 
-@media (min-width: 410px) {
+@media (min-width: 550px) {
   .container {
-    width: 380px; } }
+    width: 520px; } }
 @media (min-width: 768px) {
   .container {
     width: 750px; } }
@@ -25,15 +25,12 @@ body {
   padding-right: 0;
   background: white; }
 
+/* Main body */
 .body-content {
   background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); }
   .body-content .main-content {
     padding: 15px; }
-
-.renderbody {
-  padding-left: 15px;
-  display: inline-block; }
 
 * {
   -webkit-margin-before: 0;
@@ -42,9 +39,14 @@ body {
   -webkit-margin-end: 0;
   -webkit-padding-start: 0; }
 
+/* Logo */
+.logo-headline {
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); }
+
 /* Top menu */
 .navbar {
-  background: #333333;
+  background: #232323;
   box-shadow: 0 0 15px black;
   border: none;
   margin-bottom: 0;
@@ -52,30 +54,13 @@ body {
   .navbar a {
     color: #f0f0f0 !important; }
 
-/* Left side menu */
-#left-side-menu {
-  float: left; }
-  #left-side-menu #left-nav-menu {
-    background: #333333;
-    width: 10em;
-    margin-bottom: 15px;
-    padding: 0; }
-    #left-side-menu #left-nav-menu li {
-      margin: 0;
-      padding: 0;
-      list-style: none; }
-    #left-side-menu #left-nav-menu a {
-      color: #f0f0f0;
-      display: block;
-      padding: 8px 12px;
-      text-decoration: none; }
-
 /* Footer */
 footer {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
-  background: #333333; }
+  background: #232323;
+  box-shadow: 0 0 15px black; }
   footer p {
     color: #f0f0f0;
     margin: 0; }
@@ -93,7 +78,8 @@ h2 {
   margin: 0; }
 
 hr {
-  margin: 0; }
+  margin: 0;
+  border-top: 1px solid #CCCCCC; }
 
 /* Set max-width on the form input elements since they're 100% wide by default */
 input, select, textarea {
@@ -105,24 +91,25 @@ input, select, textarea {
   color: #ff420e; }
 #recruiting .recruitment-open {
   margin-bottom: 10px; }
-#recruiting #recruitment-list {
-  margin-left: 16px; }
-#recruiting .recruitment-class {
-  margin-bottom: 5px;
-  margin-top: 5px; }
-  #recruiting .recruitment-class .class-icon {
+#recruiting #recruitment-list :last-child hr {
+  display: none; }
+#recruiting #recruitment-list .recruitment-class {
+  margin-top: 8px;
+  margin-bottom: 4px; }
+  #recruiting #recruitment-list .recruitment-class .class-icon {
     width: 40px;
     height: 40px;
     border-radius: 4px;
     box-shadow: 0 0 3px #000000, inset 0 0 5px #DDDDDD;
-    border: 1px solid #aaaaaa; }
-  #recruiting .recruitment-class .class-name-spec {
-    margin-left: 5px; }
-  #recruiting .recruitment-class .class-priority {
+    border: 1px solid #AAAAAA;
+    display: inline-block; }
+  #recruiting #recruitment-list .recruitment-class .class-name-spec {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top; }
+  #recruiting #recruitment-list .recruitment-class .class-priority {
+    display: inline-flex;
     float: right;
     padding-top: 10px;
-    padding-right: 15px; }
-
-.logo-headline {
-  padding: 25px; }
+    padding-right: 10px; }
 

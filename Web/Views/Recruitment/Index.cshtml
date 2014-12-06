@@ -15,9 +15,9 @@
         <div class="recruitment-open">We're currently recruiting the following classes and specializations</div>
         <div id="recruitment-list">
             <div ng-repeat="class in recruitmentClasses">
-                <div class="recruitment-class row">
-                    <div class="class-icon col-md-4" ng-back-img="/Images/class-icons/{{class.Icon}}"></div>
-                    <div class="col-md-4 class-name-spec">
+                <div class="recruitment-class">
+                    <div class="class-icon" ng-back-img="/Images/class-icons/{{class.Icon}}"></div>
+                    <div class="class-name-spec">
                         <div ng-style="{color: '{{class.ClassColor}}'}">{{class.Class}}</div>
                         <div ng-show="class.Spec != null && class.Spec != ''" ng-style="{color: '{{class.ClassColor}}'}">- {{class.Spec}}</div>
                     </div>

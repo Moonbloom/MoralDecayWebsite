@@ -1,5 +1,5 @@
 /* Variables */
-$color-dark: #333333;
+$color-dark: #232323;
 $color-bright: #F0F0F0;
 $hover-color: rgba(255, 255, 255, 0.2);
 
@@ -15,9 +15,9 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-@media (min-width: 410px) {
+@media (min-width: 550px) {
     .container {
-        width: 380px;
+        width: 520px;
     }
 }
 
@@ -47,6 +47,7 @@ body {
     background: white;
 }
 
+/* Main body */
 .body-content {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: $box-shadow-light;
@@ -56,17 +57,18 @@ body {
     }
 }
 
-.renderbody {
-    padding-left: 15px;
-    display: inline-block;
-}
-
 * {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
     -webkit-padding-start: 0;
+}
+
+/* Logo */
+.logo-headline{
+    padding: 25px;
+        box-shadow: $box-shadow-light;
 }
 
 /* Top menu */
@@ -82,38 +84,14 @@ body {
     }
 }
 
-/* Left side menu */
-
-#left-side-menu {
-    float: left;
-
-    #left-nav-menu {
-        background: $color-dark;
-        width: 10em;
-        margin-bottom: 15px;
-        padding: 0;
-
-        li {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        a {
-            color: $color-bright;
-            display: block;
-            padding: 8px 12px;
-            text-decoration: none;
-        }
-    }
-}
 
 /* Footer */
 footer {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
-    background: $color-dark;
+    background: #232323;
+    box-shadow: $box-shadow-dark;
 
     p {
         color: $color-bright;
@@ -140,6 +118,7 @@ h2 {
 
 hr {
     margin: 0;
+    border-top: 1px solid #CCCCCC;
 }
 
 /* Set max-width on the form input elements since they're 100% wide by default */
@@ -163,33 +142,36 @@ input, select, textarea {
     }
 
     #recruitment-list {
-        margin-left: 16px;
-    }
+    
+        :last-child hr {
+            display: none;
+        }
 
-    .recruitment-class {
-        margin-bottom: 5px;
-        margin-top: 5px;
+        .recruitment-class {
+            margin-top: 8px;
+            margin-bottom: 4px;
         
-        .class-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 4px;
-            box-shadow: 0 0 3px #000000, inset 0 0 5px #DDDDDD;
-            border: 1px solid #AAAAAA
-        }
+            .class-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 4px;
+                box-shadow: 0 0 3px #000000, inset 0 0 5px #DDDDDD;
+                border: 1px solid #AAAAAA;
+                display: inline-block;
+            }
 
-        .class-name-spec {
-            margin-left: 5px;
-        }
+            .class-name-spec {
+                margin-left: 5px;
+                display: inline-block;
+                vertical-align: top;
+            }
 
-        .class-priority {
-            float: right;
-            padding-top: 10px;
-            padding-right: 15px;
+            .class-priority {
+                display: inline-flex;
+                float: right;
+                padding-top: 10px;
+                padding-right: 10px;
+            }
         }
     }
-}
-
-.logo-headline{
-    padding: 25px;
 }
