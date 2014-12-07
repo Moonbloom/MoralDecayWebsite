@@ -14,7 +14,7 @@ namespace Web
             configuration.Routes.MapHttpRoute(
                 "DefaultApi",
                 "api/{controller}/{id}",
-                new { controller = "Test", id = RouteParameter.Optional }
+                new { controller = "Post", id = RouteParameter.Optional }
             );
         }
 

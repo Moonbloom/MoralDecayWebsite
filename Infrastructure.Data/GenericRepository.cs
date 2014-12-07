@@ -1,4 +1,5 @@
 ﻿using Core.DomainModel;
+using Core.DomainModel.Shared;
 using Core.DomainServices;
 using System;
 using System.Collections.Generic;

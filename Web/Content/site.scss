@@ -83,7 +83,13 @@ body {
         color: $color-bright!important;
     }
 }
-
+.navbar-right {
+    margin-right: 0;
+}
+.navbar-collapse{
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /* Footer */
 footer {

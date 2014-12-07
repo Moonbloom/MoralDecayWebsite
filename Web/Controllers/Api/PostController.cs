@@ -1,25 +1,25 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using System.Web.Mvc;
 using AutoMapper;
-using Core.DomainModel;
+using Core.DomainModel.Frontpage;
 using Core.DomainServices;
-using Web.Models;
+using Web.Models.Post;
 
 namespace Web.Controllers.Api
 {
     [RequireHttps]
-    [System.Web.Http.Authorize]
-    public class TestController : ApiController
+    public class PostController : ApiController
     {
-        private readonly IGenericRepository<Test> _repo;
+        private readonly IGenericRepository<Post> _repo;
 
-        public TestController(IGenericRepository<Test> repo)
+        public PostController(IGenericRepository<Post> repo)
         {
             _repo = repo;
         }
 
-        // GET: api/Test
+        // GET: api/Post
         public IHttpActionResult Get()
         {
             var list = _repo.Get();
@@ -27,12 +27,12 @@ namespace Web.Controllers.Api
             if (list == null)
                 return NotFound();
 
-            var vmlist = Mapper.Map<IEnumerable<TestViewModel>>(list);
+            var dtolist = Mapper.Map<IEnumerable<PostViewModel>>(list);
 
-            return Ok(vmlist);
+            return Ok(dtolist);
         }
 
-        // GET: api/Test/1
+        // GET: api/Post/1
         public IHttpActionResult Get(int id)
         {
             var getById = (_repo.GetByKey(id));
@@ -40,7 +40,7 @@ namespace Web.Controllers.Api
             if (getById == null)
                 return NotFound();
 
-            return Ok(Mapper.Map<TestViewModel>(getById));
+            return Ok(Mapper.Map<PostViewModel>(getById));
         }
     }
 }
