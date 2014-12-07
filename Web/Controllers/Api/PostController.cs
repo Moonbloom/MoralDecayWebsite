@@ -20,6 +20,7 @@ namespace Web.Controllers.Api
         }
 
         // GET: api/Post
+        [System.Web.Mvc.HttpGet]
         public IHttpActionResult Get()
         {
             var list = _repo.Get();
@@ -33,7 +34,19 @@ namespace Web.Controllers.Api
         }
 
         // GET: api/Post/1
+        [System.Web.Mvc.HttpGet]
         public IHttpActionResult Get(int id)
+        {
+            var getById = (_repo.GetByKey(id));
+
+            if (getById == null)
+                return NotFound();
+
+            return Ok(Mapper.Map<PostViewModel>(getById));
+        }
+
+        [System.Web.Mvc.HttpPost]
+        public IHttpActionResult Post(int id)
         {
             var getById = (_repo.GetByKey(id));
 
