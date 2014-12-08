@@ -237,6 +237,7 @@
     <Content Include="Images\class-icons\class-icon-warlock.jpg" />
     <Content Include="Images\class-icons\class-icon-warrior.jpg" />
     <Content Include="Images\errors\404-killed-kenny.jpg" />
+    <Content Include="Images\kill-shots\MoralDecayMC40Cleared.jpg" />
     <Content Include="Images\Logo.png" />
     <Content Include="Scripts\angular\bodyCtrl.js" />
     <Content Include="Scripts\angular\back-img-directive.js" />
