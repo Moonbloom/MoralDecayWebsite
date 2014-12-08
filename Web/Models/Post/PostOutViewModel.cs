@@ -2,7 +2,7 @@
 
 namespace Web.Models.Post
 {
-    public class PostViewModel
+    public class PostOutViewModel
     {
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }

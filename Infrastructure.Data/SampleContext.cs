@@ -15,7 +15,13 @@ namespace Infrastructure.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            // use conventions when possible
+            modelBuilder.Entity<PostRevision>()
+               .HasRequired(t => t.Post)
+               .WithMany(t => t.Revisions)
+               .HasForeignKey(d => d.PostId)
+               .WillCascadeOnDelete(true);
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

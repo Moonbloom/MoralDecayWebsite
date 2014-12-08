@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using Core.DomainModel;
 using System;
 using System.Data.Entity;
 using Core.DomainModel.Frontpage;
