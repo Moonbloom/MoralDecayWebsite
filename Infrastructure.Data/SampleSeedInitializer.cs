@@ -5,25 +5,44 @@ using Core.DomainModel.Frontpage;
 
 namespace Infrastructure.Data
 {
-    public class SampleSeedInitializer : DropCreateDatabaseIfModelChanges<SampleContext>
+    public class SampleSeedInitializer : DropCreateDatabaseAlways<SampleContext>
     {
         protected override void Seed(SampleContext context)
         {
             var samplePostRevision = new PostRevision { 
-                Header = "First Kill",
-                ModifiedOn = DateTime.UtcNow, 
-                Text = "YEAH!"};
+                Header = "Shaman first",
+                ModifiedOn = DateTime.UtcNow,
+                Text = "<div>This is the beautiful Shaman icon <img src='/Images/class-icons/class-icon-shaman.jpg'/> Representing the far superior class in WoW</div>"
+            };
 
-            var samplePost1 = new Post { 
+            var samplePost = new Post { 
                 Active = true,
                 CreatedOn = DateTime.UtcNow, 
                 Priority = Priority.Locked,
                 Revisions = new Collection<PostRevision>
                 {
                     samplePostRevision
-                }};
+                }
+            };            
+            
+            var anotherSamplePostRevision = new PostRevision { 
+                Header = "Rogue second",
+                ModifiedOn = DateTime.UtcNow,
+                Text = "<div>This is the awful Rogue icon <img src='/Images/class-icons/class-icon-rogue.jpg'/> Representing the weakest class in WoW</div>"
+            };
 
-            context.Posts.Add(samplePost1);
+            var anotherSamplePost = new Post { 
+                Active = true,
+                CreatedOn = DateTime.UtcNow, 
+                Priority = Priority.Locked,
+                Revisions = new Collection<PostRevision>
+                {
+                    anotherSamplePostRevision
+                }
+            };
+
+            context.Posts.Add(samplePost);
+            context.Posts.Add(anotherSamplePost);
             context.SaveChanges();
         }
     }

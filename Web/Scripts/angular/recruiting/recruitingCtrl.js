@@ -22,35 +22,36 @@
 
     var currentRecruitment = [
         {
-            Class: "Death Knight",
-            Spec: "Blood",
-            ClassColor: colorClassMapping["Death Knight"],
-            Icon: "icon-deathknight.jpg",
+            Class: "Monk",
+            Spec: "Mistweaver",
+            ClassColor: colorClassMapping["Monk"],
+            Icon: "class-icon-monk.jpg",
             Priority: "High",
             PriorityColor: colorPriorityMapping["High"]
         },
         {
             Class: "Druid",
-            Spec: "Balance",
+            Spec: "Restoration",
             ClassColor: colorClassMapping["Druid"],
-            Icon: "icon-druid.jpg",
-            Priority: "Low",
-            PriorityColor: colorPriorityMapping["Low"]
+            Icon: "class-icon-druid.jpg",
+            Priority: "High",
+            PriorityColor: colorPriorityMapping["High"]
         },
         {
-            Class: "Paladin",
+            Class: "Priest",
             Spec: "Holy",
-            ClassColor: colorClassMapping["Paladin"],
-            Icon: "icon-paladin.jpg",
-            Priority: "Medium",
-            PriorityColor: colorPriorityMapping["Medium"]
+            ClassColor: colorClassMapping["Priest"],
+            Icon: "class-icon-priest.jpg",
+            Priority: "High",
+            PriorityColor: colorPriorityMapping["High"]
         },
         {
-            Class: "Warlock",
-            ClassColor: colorClassMapping["Warlock"],
-            Icon: "icon-warlock.jpg",
-            Priority: "Low",
-            PriorityColor: colorPriorityMapping["Low"]
+            Class: "Shaman",
+            Spec: "Restoration",
+            ClassColor: colorClassMapping["Shaman"],
+            Icon: "class-icon-shaman.jpg",
+            Priority: "High",
+            PriorityColor: colorPriorityMapping["High"]
         }
     ];
 

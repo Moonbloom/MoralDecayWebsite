@@ -225,17 +225,17 @@
       <Link>ConnectionStrings.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\class-icons\icon-deathknight.jpg" />
-    <Content Include="Images\class-icons\icon-druid.jpg" />
-    <Content Include="Images\class-icons\icon-hunter.jpg" />
-    <Content Include="Images\class-icons\icon-mage.jpg" />
-    <Content Include="Images\class-icons\icon-monk.jpg" />
-    <Content Include="Images\class-icons\icon-paladin.jpg" />
-    <Content Include="Images\class-icons\icon-priest.jpg" />
-    <Content Include="Images\class-icons\icon-rogue.jpg" />
-    <Content Include="Images\class-icons\icon-shaman.jpg" />
-    <Content Include="Images\class-icons\icon-warlock.jpg" />
-    <Content Include="Images\class-icons\icon-warrior.jpg" />
+    <Content Include="Images\class-icons\class-icon-deathknight.jpg" />
+    <Content Include="Images\class-icons\class-icon-druid.jpg" />
+    <Content Include="Images\class-icons\class-icon-hunter.jpg" />
+    <Content Include="Images\class-icons\class-icon-mage.jpg" />
+    <Content Include="Images\class-icons\class-icon-monk.jpg" />
+    <Content Include="Images\class-icons\class-icon-paladin.jpg" />
+    <Content Include="Images\class-icons\class-icon-priest.jpg" />
+    <Content Include="Images\class-icons\class-icon-rogue.jpg" />
+    <Content Include="Images\class-icons\class-icon-shaman.jpg" />
+    <Content Include="Images\class-icons\class-icon-warlock.jpg" />
+    <Content Include="Images\class-icons\class-icon-warrior.jpg" />
     <Content Include="Images\errors\404-killed-kenny.jpg" />
     <Content Include="Images\Logo.png" />
     <Content Include="Scripts\angular\bodyCtrl.js" />
@@ -309,7 +309,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Partials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

@@ -1,11 +1,14 @@
-/* Variables */
+/*#region Variables */
 $color-dark: #232323;
 $color-bright: #F0F0F0;
 $hover-color: rgba(255, 255, 255, 0.2);
 
 $box-shadow-light: 0 0 15px rgba(0, 0, 0, .4);
 $box-shadow-dark: 0 0 15px rgba(0, 0, 0, 1);
+$box-shadow-dark-small: 0 0 5px rgba(0, 0, 0, .1);
+/*#endregion Variables */
 
+/*#region Shared */
 [ng-cloak] {
     display: none!important
 }
@@ -44,12 +47,11 @@ body {
     margin-left: auto;
     padding-left: 0;
     padding-right: 0;
-    background: white;
+    background: #F8F8F8;
 }
 
 /* Main body */
 .body-content {
-    background-color: rgba(255, 255, 255, 1);
     box-shadow: $box-shadow-light;
 
     .main-content {
@@ -118,7 +120,7 @@ a:hover {
     transition: background-color $hover-delay $hover-animation;
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
@@ -127,17 +129,38 @@ hr {
     border-top: 1px solid #CCCCCC;
 }
 
-/* Set max-width on the form input elements since they're 100% wide by default */
 input, select, textarea {
     max-width: 300px;
 }
+/*#endregion Shared */
 
-/* Page specific for Frontpage */
+/*#region Frontpage */
 #frontpage {
 
-}
+    .frontpage-post-element {
+        box-shadow: $box-shadow-dark-small;
+        padding: 10px;
+        margin-bottom: 15px;
 
-/* Page specific for Recruiting */
+        .frontpage-post-html {
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 4px;
+                box-shadow: 0 0 3px #000000, inset 0 0 5px #DDDDDD;
+                border: 1px solid #AAAAAA;
+                display: inline-block;
+            }
+        }
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+/*#endregion Frontpage */
+
+/*#region Recruitment */
 #recruiting {
     .recruitment-closed {
         color: #FF420E
@@ -170,6 +193,7 @@ input, select, textarea {
                 margin-left: 5px;
                 display: inline-block;
                 vertical-align: top;
+                text-shadow: 1px 1px #000000;
             }
 
             .class-priority {
@@ -181,3 +205,4 @@ input, select, textarea {
         }
     }
 }
+/*#endregion Recruitment */

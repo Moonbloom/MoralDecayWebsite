@@ -1,4 +1,6 @@
-/* Variables */
+/*#region Variables */
+/*#endregion Variables */
+/*#region Shared */
 [ng-cloak] {
   display: none !important; }
 
@@ -23,11 +25,10 @@ body {
   margin-left: auto;
   padding-left: 0;
   padding-right: 0;
-  background: white; }
+  background: #F8F8F8; }
 
 /* Main body */
 .body-content {
-  background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); }
   .body-content .main-content {
     padding: 15px; }
@@ -81,19 +82,34 @@ a:hover {
   -ms-transition: background-color 250ms linear;
   transition: background-color 250ms linear; }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 hr {
   margin: 0;
   border-top: 1px solid #CCCCCC; }
 
-/* Set max-width on the form input elements since they're 100% wide by default */
 input, select, textarea {
   max-width: 300px; }
 
-/* Page specific for Frontpage */
-/* Page specific for Recruiting */
+/*#endregion Shared */
+/*#region Frontpage */
+#frontpage .frontpage-post-element {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 15px; }
+  #frontpage .frontpage-post-element .frontpage-post-html img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #000000, inset 0 0 5px #DDDDDD;
+    border: 1px solid #AAAAAA;
+    display: inline-block; }
+#frontpage :last-child {
+  margin-bottom: 0; }
+
+/*#endregion Frontpage */
+/*#region Recruitment */
 #recruiting .recruitment-closed {
   color: #ff420e; }
 #recruiting .recruitment-open {
@@ -113,10 +129,13 @@ input, select, textarea {
   #recruiting #recruitment-list .recruitment-class .class-name-spec {
     margin-left: 5px;
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    text-shadow: 1px 1px #000000; }
   #recruiting #recruitment-list .recruitment-class .class-priority {
     display: inline-flex;
     float: right;
     padding-top: 10px;
     padding-right: 10px; }
+
+/*#endregion Recruitment */
 
