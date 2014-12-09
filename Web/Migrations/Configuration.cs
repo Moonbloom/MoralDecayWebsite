@@ -1,3 +1,5 @@
+using Web.Models;
+
 namespace Web.Migrations
 {
     using System.Data.Entity.Migrations;
@@ -13,7 +15,16 @@ namespace Web.Migrations
         protected override void Seed(Web.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
-
+            context.Users.AddOrUpdate(
+                new ApplicationUser { 
+                    MdUser = new MDUser{ InGameName = "Admin" }, 
+                    Email = "admin@moral.dk", 
+                    PasswordHash = "ACiYR/hF/EC6JFIC/XOgQJinBoASYI/XhUwXKFJhUqSfWCT68l9Ya6dmyZxa+lGsRQ==",
+                    SecurityStamp = "7fbcf980-9ae7-44ed-9b34-770741fe7465",
+                    UserName = "admin@moral.dk"
+                }
+            );
+            
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //

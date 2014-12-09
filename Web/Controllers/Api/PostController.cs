@@ -56,6 +56,7 @@ namespace Web.Controllers.Api
 
         // POST: api/Post
         [System.Web.Mvc.HttpPost]
+        [System.Web.Mvc.Authorize]
         public IHttpActionResult Post([FromBody]PostInViewModel value)
         {
             if (value == null) return NotFound();
