@@ -6,6 +6,8 @@
     <title>@ViewBag.Title - Moral Decay - Sunstrider</title>
     @Styles.Render("~/bundles/core/css")
     @Scripts.Render("~/bundles/core/js/header")
+    @Scripts.Render("~/bundles/view/frontpage")
+    @Scripts.Render("~/bundles/view/recruitment")
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
 </head>
     <body ng-controller="bodyCtrl">
@@ -36,8 +38,8 @@
             </div>
         </div>
         <div class="container body-content">
-            <div class="main-content">
-                 @RenderBody()
+            <div ng-view id="main" class="main-content">
+                @RenderBody()
             </div>
             <footer>
                 <p>Moral Decay - Sunstrider</p>
@@ -45,6 +47,6 @@
         </div>
 
         @Scripts.Render("~/bundles/core/js/footer")
-        @RenderSection("Scripts", required: false)
+        @RenderSection("Scripts", false)
     </body>
 </html>

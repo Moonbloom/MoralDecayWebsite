@@ -195,6 +195,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\PostController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FrontpageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RecruitmentController.cs" />
@@ -239,10 +240,12 @@
     <Content Include="Images\errors\404-killed-kenny.jpg" />
     <Content Include="Images\kill-shots\MoralDecayMC40Cleared.jpg" />
     <Content Include="Images\Logo.png" />
+    <Content Include="Scripts\core\angular\angular-route.js" />
+    <Content Include="Scripts\core\angular\angular-route.min.js" />
     <Content Include="Scripts\angular\bodyCtrl.js" />
     <Content Include="Scripts\angular\back-img-directive.js" />
     <Content Include="Scripts\angular\frontpage\frontpageCtrl.js" />
-    <Content Include="Scripts\angular\recruiting\recruitingCtrl.js" />
+    <Content Include="Scripts\angular\recruitment\recruitmentCtrl.js" />
     <Content Include="Scripts\core\bootstrap\bootstrap.js" />
     <Content Include="Scripts\core\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\core\angular\angular.js" />
@@ -254,6 +257,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\core\angular\angular-route.min.js.map" />
     <None Include="Scripts\core\jquery\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\core\angular\angular-mocks.js" />
     <Content Include="Scripts\core\jquery\jquery-2.1.1.js" />
@@ -282,7 +286,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Frontpage\Index.cshtml" />
+    <None Include="Views\Frontpage\Index.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
@@ -306,7 +310,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Recruitment\Index.cshtml" />
+    <Content Include="Views\Pages\frontpage.html" />
+    <Content Include="Views\Pages\recruitment.html" />
+    <None Include="Views\Recruitment\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -352,7 +359,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52665</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44300/</IISUrl>
+          <IISUrl>http://localhost:52665/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

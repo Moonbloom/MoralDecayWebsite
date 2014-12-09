@@ -9,6 +9,7 @@ namespace Web
             #region Core scripts
             bundles.Add(new ScriptBundle("~/bundles/core/js/header").Include(
                 "~/Scripts/core/angular/angular.js",
+                "~/Scripts/core/angular/angular-route.js",
                 "~/Scripts/angular/bodyCtrl.js",
                 // Use the development version of Modernizr to develop with and learn from. Then, when you're ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
                 "~/Scripts/core/various/modernizr-{version}.js"
@@ -38,8 +39,8 @@ namespace Web
                 "~/Scripts/angular/frontpage/frontpageCtrl.js"
                 ));
 
-            bundles.Add(new ScriptBundle("~/bundles/view/recruiting").Include(
-                "~/Scripts/angular/recruiting/recruitingCtrl.js",
+            bundles.Add(new ScriptBundle("~/bundles/view/recruitment").Include(
+                "~/Scripts/angular/recruitment/recruitmentCtrl.js",
                 "~/Scripts/angular/back-img-directive.js"
                 ));
             #endregion

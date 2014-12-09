@@ -1,4 +1,4 @@
-﻿app.controller('recruitingCtrl', ['$scope', function ($scope) {
+﻿app.controller('recruitmentCtrl', ['$scope', function ($scope) {
 
     var colorClassMapping = {
         "Death Knight": "#C41E3B",

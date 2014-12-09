@@ -9,24 +9,6 @@ namespace Infrastructure.Data
     {
         protected override void Seed(SampleContext context)
         {
-            var MCPostRevision = new PostRevision
-            {
-                Header = "Moral Decay - 40man Molten Core - Nice and easy",
-                ModifiedOn = DateTime.UtcNow,
-                Text = "<img src='/Images/kill-shots/MoralDecayMC40Cleared.jpg'/><br/>We cleared it with 40 Moral Decay people, and it was fun and easy, nothing more to say"
-            };
-
-            var MCPost = new Post
-            {
-                Active = true,
-                CreatedOn = DateTime.UtcNow,
-                Priority = Priority.Locked,
-                Revisions = new Collection<PostRevision>
-                {
-                    MCPostRevision
-                }
-            };  
-
             var samplePostRevision = new PostRevision { 
                 Header = "Shaman first",
                 ModifiedOn = DateTime.UtcNow,
@@ -59,7 +41,6 @@ namespace Infrastructure.Data
                 }
             };
 
-            context.Posts.Add(MCPost);
             context.Posts.Add(samplePost);
             context.Posts.Add(anotherSamplePost);
             context.SaveChanges();

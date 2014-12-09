@@ -1,0 +1,6 @@
+﻿<div id="frontpage" ng-cloak ng-controller="frontpageCtrl">
+    <div class="frontpage-post-element" ng-repeat="post in frontpagePosts" ng-show="post.Active" id="{{post.Id}}">
+        <h3>{{post.Headline}}</h3>
+        <div class="frontpage-post-html"ng-bind-html="inputRawHtml(post.RawHtml)"></div>
+    </div>
+</div>
