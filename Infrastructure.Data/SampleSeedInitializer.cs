@@ -12,7 +12,7 @@ namespace Infrastructure.Data
             var samplePostRevision = new PostRevision { 
                 Header = "Shaman first",
                 ModifiedOn = DateTime.UtcNow,
-                Text = "<div>This is the beautiful Shaman icon <img src='/Images/class-icons/class-icon-shaman.jpg'/> Representing the far superior class in WoW</div>"
+                Text = "<div>This is the beautiful Android icon <img ng-src='http://www.bizreport.com/2011/02/03/android-logo-200x200.jpg'/> Representing the far superior mobile OS in the world</div>"
             };
 
             var samplePost = new Post { 
@@ -28,7 +28,7 @@ namespace Infrastructure.Data
             var anotherSamplePostRevision = new PostRevision { 
                 Header = "Rogue second",
                 ModifiedOn = DateTime.UtcNow,
-                Text = "<div>This is the awful Rogue icon <img src='/Images/class-icons/class-icon-rogue.jpg'/> Representing the weakest class in WoW</div>"
+                Text = "<div>This is the awful iPhone icon <img src='http://cydiahelp.com/wp-content/uploads/2011/08/Apple-Logo-200x200.png'/> Representing the weakest mobile OS in the world</div>"
             };
 
             var anotherSamplePost = new Post { 
