@@ -65,6 +65,10 @@ namespace Web.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Ingame name")]
+        public string InGameName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

@@ -12,13 +12,13 @@ namespace Infrastructure.Data
             var samplePostRevision = new PostRevision { 
                 Header = "Shaman first",
                 ModifiedOn = DateTime.UtcNow,
-                Text = "<div>This is the beautiful Android icon <img ng-src='http://www.bizreport.com/2011/02/03/android-logo-200x200.jpg'/> Representing the far superior mobile OS in the world</div>"
+                Text = "<div>This is the beautiful Android icon <img src='http://www.bizreport.com/2011/02/03/android-logo-200x200.jpg'/> Representing the far superior mobile OS in the world</div>"
             };
 
             var samplePost = new Post { 
                 Active = true,
                 CreatedOn = DateTime.UtcNow, 
-                Priority = Priority.Locked,
+                Priority = Priority.High,
                 Revisions = new Collection<PostRevision>
                 {
                     samplePostRevision
