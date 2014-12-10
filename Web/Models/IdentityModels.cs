@@ -28,8 +28,7 @@ namespace Web.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("UserConnection", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("UserConnection", throwIfV1Schema: false)
         {
         }
 

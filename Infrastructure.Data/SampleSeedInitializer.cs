@@ -5,12 +5,12 @@ using Core.DomainModel.Frontpage;
 
 namespace Infrastructure.Data
 {
-    public class SampleSeedInitializer : DropCreateDatabaseAlways<SampleContext>
+    public class SampleSeedInitializer : CreateDatabaseIfNotExists<SampleContext>
     {
         protected override void Seed(SampleContext context)
         {
             var samplePostRevision = new PostRevision { 
-                Header = "Shaman first",
+                Header = "Android first",
                 ModifiedOn = DateTime.UtcNow,
                 Text = "<div>This is the beautiful Android icon <img src='http://www.bizreport.com/2011/02/03/android-logo-200x200.jpg'/> Representing the far superior mobile OS in the world</div>"
             };
@@ -26,9 +26,9 @@ namespace Infrastructure.Data
             };            
             
             var anotherSamplePostRevision = new PostRevision { 
-                Header = "Rogue second",
+                Header = "iPhone last",
                 ModifiedOn = DateTime.UtcNow,
-                Text = "<div>This is the awful iPhone icon <img src='http://cydiahelp.com/wp-content/uploads/2011/08/Apple-Logo-200x200.png'/> Representing the weakest mobile OS in the world</div>"
+                Text = "<div>This is the awful iPhone icon <img src='http://cydiahelp.com/wp-content/uploads/2011/08/Apple-Logo-200x200.png'/> Representing the worst mobile OS in the world</div>"
             };
 
             var anotherSamplePost = new Post { 
