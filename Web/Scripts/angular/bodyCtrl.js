@@ -1,15 +1,30 @@
 ﻿app = angular.module('mdWebApp', ['ngRoute']);
 
+var titleAppend = " - Moral Decay - Sunstrider";
+
 app.config(["$routeProvider", function($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl: '/Views/Pages/frontpage.html',
-            controller: 'frontpageCtrl'
+            title: "Frontpage"
         })
         .when('/recruitment', {
             templateUrl: '/Views/Pages/recruitment.html',
-            controller: 'recruitmentCtrl'
+            title: "Recruitment"
+        })
+        .otherwise({
+            templateUrl: '/Views/Pages/error.html',
         });
+}]);
+
+app.run(['$location', '$rootScope', function ($location, $rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        if (current.$$route != null) {
+            $rootScope.title = current.$$route.title + titleAppend;
+        } else {
+            $rootScope.title = "404 - Page not found" + titleAppend;
+        }
+    });
 }]);
 
 app.controller('bodyCtrl', ['$scope', function($scope) {

@@ -16,14 +16,23 @@ namespace Web.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public virtual MDUser MdUser { get; set; }
+    }
+
+    public class MDUser
+    {
+        public int Id { get; set; }
+        public string InGameName { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("UserConnection", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("UserConnection", throwIfV1Schema: false)
         {
         }
+
+        public DbSet<MDUser> MdUsers { get; set; }
 
         public static ApplicationDbContext Create()
         {

@@ -22,7 +22,7 @@ namespace Web
         {
             public BrowserJsonFormatter()
             {
-                this.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+                SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
             }
 
             public override void SetDefaultContentHeaders(Type type, HttpContentHeaders headers, MediaTypeHeaderValue mediaType)

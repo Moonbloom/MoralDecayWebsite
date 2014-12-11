@@ -7,6 +7,9 @@ using System.Web.Mvc;
 using AutoMapper;
 using Core.DomainModel.Frontpage;
 using Core.DomainServices;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Web.Models;
 using Web.Models.Post;
 
 namespace Web.Controllers.Api
@@ -53,12 +56,15 @@ namespace Web.Controllers.Api
 
         // POST: api/Post
         [System.Web.Mvc.HttpPost]
+        [System.Web.Mvc.Authorize]
         public IHttpActionResult Post([FromBody]PostInViewModel value)
         {
             if (value == null) return NotFound();
-
             try
             {
+                var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+                var currentUser = manager.FindById(User.Identity.GetUserId());
+
                 //Create a new Post
                 var newPost = Mapper.Map<Post>(value);
                 var newRes = newPost.Revisions.FirstOrDefault();

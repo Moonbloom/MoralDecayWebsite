@@ -3,50 +3,47 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Moral Decay - Sunstrider</title>
+    <title ng-bind="title"></title>
     @Styles.Render("~/bundles/core/css")
     @Scripts.Render("~/bundles/core/js/header")
     @Scripts.Render("~/bundles/view/frontpage")
     @Scripts.Render("~/bundles/view/recruitment")
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
 </head>
-    <body ng-controller="bodyCtrl">
-        <div class="container">
-            <div class="logo-headline hidden-xs">
-                <img src="/Images/Logo.png" alt="Moral Decay" />
+<body ng-controller="bodyCtrl">
+    <div class="container">
+        <div class="logo-headline hidden-xs">
+            <img src="/Images/Logo.png" alt="Moral Decay" />
+        </div>
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <div class="navbar navbar-default">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Moral Decay", "Index", "Frontpage", new { area = "" }, new { @class = "navbar-brand visible-xs" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav" ng-cloak>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" ng-cloak>
                         <li ng-repeat="menuItem in leftNavMenuItems">
                             <a href="{{menuItem.href}}">
                                 {{menuItem.text}}
                             </a>
                         </li>
                     </ul>
-                    <hr class="visible-xs" />
-                    @Html.Partial("_LoginPartial")
-                </div>
+                <hr class="visible-xs" />
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
-        <div class="container body-content">
-            <div ng-view id="main" class="main-content">
-                @RenderBody()
-            </div>
-            <footer>
-                <p>Moral Decay - Sunstrider</p>
-            </footer>
-        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <p>Moral Decay - Sunstrider</p>
+        </footer>
+    </div>
 
-        @Scripts.Render("~/bundles/core/js/footer")
-        @RenderSection("Scripts", false)
-    </body>
+    @Scripts.Render("~/bundles/core/js/footer")
+    @RenderSection("Scripts", false)
+</body>
 </html>

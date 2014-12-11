@@ -54,7 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationUser.cs" />
     <Compile Include="Frontpage\Post.cs" />
     <Compile Include="Frontpage\IRevision.cs" />
     <Compile Include="Frontpage\PostRevision.cs" />
