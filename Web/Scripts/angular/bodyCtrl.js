@@ -1,15 +1,15 @@
 ﻿app = angular.module('mdWebApp', ['ngRoute']);
 
-app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
+app.config(["$routeProvider", function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: '/Views/Pages/frontpage.html'
+            templateUrl: '/Views/Pages/frontpage.html',
+            controller: 'frontpageCtrl'
         })
         .when('/recruitment', {
-            templateUrl: '/Views/Pages/recruitment.html'
+            templateUrl: '/Views/Pages/recruitment.html',
+            controller: 'recruitmentCtrl'
         });
-
-    $locationProvider.html5Mode(true);
 }]);
 
 app.controller('bodyCtrl', ['$scope', function($scope) {
@@ -21,19 +21,19 @@ app.controller('bodyCtrl', ['$scope', function($scope) {
         },
         {
             text: "FORUM",
-            href: "#forum"
+            href: "#/forum"
         },
         {
             text: "RECRUITMENT",
-            href: "#recruitment"
+            href: "#/recruitment"
         },
         {
             text: "GALLERY",
-            href: "#gallery"
+            href: "#/gallery"
         },
         {
             text: "ABOUT US",
-            href: "#about-us"
+            href: "#/about-us"
         }
     ];
 }]);

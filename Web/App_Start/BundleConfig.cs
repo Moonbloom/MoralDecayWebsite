@@ -20,10 +20,6 @@ namespace Web
                 "~/Scripts/core/jquery/jquery-{version}.js",
                 "~/Scripts/core/jquery/jquery.validate*"
                 ));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                "~/Scripts/core/jquery/jquery.validate*"
-                ));
             #endregion
 
             #region Core styles
